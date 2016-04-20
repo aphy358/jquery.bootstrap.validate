@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Demo of BootStyleToolTip</title>
+    <link href="./css/QueryDialog.css" rel="stylesheet" />
+    <link href="./css/jquery.validate.css" rel="stylesheet" />
+
+</head>
+
+<body class="">
+    <div class="qdialog-mask"></div>
+    <form>
+        <div id="QueryDialog" style="display: block;">
+        <ul class="query-body">
+            <li class="query-item">
+                <div class="query-field-rmk">姓名</div>
+                <div class="condition-rmk">包含</div>
+                <input class="condition-input"></li>
+            <li class="query-item">
+                <div class="query-field-rmk">手机号</div>
+                <input class="condition-input" placeholder="请输入数字" name="mobile">
+            <li class="query-item">
+                <div class="query-field-rmk">订单时间</div>
+                <div class="condition-rmk">大于</div>
+                <input class="condition-input" type="date"><div class="condition-rmk">小于</div>
+                <input class="condition-input" type="date" name="date"></li>
+            <li class="query-item">
+                <div class="query-field-rmk">是否发货</div>
+                <div class="condition-rmk">全选</div>
+                <input class="condition-input" type="radio" checked="checked"><div class="condition-rmk">是</div>
+                <input class="condition-input" type="radio"><div class="condition-rmk">否</div>
+                <input class="condition-input" type="radio"></li>
+            <li class="query-item">
+                <div class="query-footer-item query-cancel">取消</div>
+                <div class="query-footer-item query-go">查询</div>
+            </li>
+        </ul>
+    </div>
+    </form>
+    
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.validate.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            InitValidator();            //初始化验证
+        });
+
+        //初始化验证
+        function InitValidator() {
+            $("form").validate({
+                rules: {
+                    mobile: {
+                        mobile: true,
+                    },
+                    date: {
+                        required: true,
+                    },
+                },
+            });
+        };
+
+        $(".query-go").on("click", function () {
+            if (!$("form").iboValid()) return;
+        });
+    </script>
+</body>
+</html>
