@@ -6,7 +6,8 @@
 
 所以只是将其用到的部分截取出来而已。
 
----
+
+## PreView
 
 该插件将jquery.validate在验证中显示错误信息部分用Bootstrap里的tooltip功能代替，使验证界面更美观。
 
