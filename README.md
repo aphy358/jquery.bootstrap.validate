@@ -23,12 +23,12 @@
 ```html
 <!-- Required Stylesheets -->
 <link href="./css/QueryDialog.css" rel="stylesheet">
-<link href="./css/jquery.validate.css" rel="stylesheet">
+<link href="./css/jquery.bootstrap.validate.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/jquery.validate.js"></script>
+<script src="./js/jquery.bootstrap.validate.js"></script>
 ```
 
 基本用法可以去网上查找jquery.validate的相关资料，如下列举示例代码.
