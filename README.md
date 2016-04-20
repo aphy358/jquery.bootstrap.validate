@@ -4,7 +4,7 @@
 
 该插件将jquery.validate在验证中显示错误信息部分用Bootstrap里的tooltip功能代替，使验证界面更美观。
 
-![View]()
+![View](https://github.com/aphy358/jquery.bootstrap.validate/blob/master/screenshot1.jpg)
 
 ## Dependencies
 
@@ -13,9 +13,8 @@
 - [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
 - [Bootstrap v3.3.4](http://getbootstrap.com)
  
-## Getting Started
 
-[下载]()
+## Getting Started
 
 ### Usage
 
@@ -23,43 +22,45 @@
 
 ```html
 <!-- Required Stylesheets -->
-<link href="QueryDialog.css" rel="stylesheet">
+<link href="./css/QueryDialog.css" rel="stylesheet">
+<link href="./css/jquery.validate.css" rel="stylesheet">
 
 <!-- Required Javascript -->
-<script src="jquery.js"></script>
-<script src="QueryDialog.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.validate.js"></script>
 ```
 
-插件将绑定如下样式的DOM，如果页面原本没有，则插件将在页面自动生成这个DOM.
-
-```html
-<div id="QueryDialog"></div>
-```
-
-基本用法如下.
+基本用法可以去网上查找jquery.validate的相关资料，如下列举示例代码.
 
 ```javascript
 $(document).ready(function () {
-    var arrStr = '[{"queryfieldtype":"1","queryfieldname":"age","queryfieldrmk":"年龄"},{"queryfieldtype":"6","queryfieldname":"name","queryfieldrmk":"姓名"},{"queryfieldtype":"5","queryfieldname":"ismarried","queryfieldrmk":"是否已婚"},{"queryfieldtype":"4","queryfieldname":"birthday","queryfieldrmk":"出生日期"}]';
-    $("#QueryDialog").QueryDialog({ data: arrStr });
+    InitValidator();            //首先要初始化验证
 });
 
-function test() {
-    $("#QueryDialog").show();
-    $(".qdialog-mask").show();
-}
+//初始化验证
+function InitValidator() {
+    $("form").validate({
+	rules: {
+	    mobile: {
+		mobile: true,
+	    },
+	    date: {
+		required: true,
+	    },
+	},
+    });
+};
+
+$(".query-go").on("click", function () {
+    if (!$("form").iboValid()) return;		//在提交表单之前进行验证
+});
 ```
 
-## Data Structure
+## Tips
 
-参数是一个字符串，结构示例：
+该插件主要是修改了jquery.validate中的showErrors方法，显示错误信息用tooltip的方式。
 
-```javascript
-var arrStr = '[{"queryfieldtype":"1","queryfieldname":"age","queryfieldrmk":"年龄"},{"queryfieldtype":"6","queryfieldname":"name","queryfieldrmk":"姓名"},{"queryfieldtype":"5","queryfieldname":"ismarried","queryfieldrmk":"是否已婚"},{"queryfieldtype":"4","queryfieldname":"birthday","queryfieldrmk":"出生日期"}]';
+另外这里并没有使用Bootstrap的原有样式文件，100多K对于手机端的使用是不是太耗流量了。
 
-//参数arrStr是一个数组的字符串，插件会将它转成json格式，并进一步处理；
-//每一个参数单体结构：{"queryfieldtype":"1","queryfieldname":"age","queryfieldrmk":"年龄"}；
-//1、queryfieldtype表示查询条件的参数类型，如“整数”、“字符型”、“日期型”等，这里“1”代表的是“浮点型数字”，当然也可以根据实际情况另外约定；
-//2、queryfieldname表示查询条件的字段名称，是要对哪个字段进行过滤；
-//3、queryfieldrmk表示查询条件字段的显示名称；
-```
+所以只是将其用到的部分截取出来而已。
