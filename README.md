@@ -1,5 +1,10 @@
 # jquery.bootstrap.validate简介
 
+该插件主要是修改了jquery.validate中的showErrors方法，显示错误信息用tooltip的方式。
+
+另外这里并没有使用Bootstrap的原有样式文件，100多K对于手机端的使用是不是太耗流量了。
+
+所以只是将其用到的部分截取出来而已。
 ---
 
 该插件将jquery.validate在验证中显示错误信息部分用Bootstrap里的tooltip功能代替，使验证界面更美观。
@@ -56,11 +61,3 @@ $(".query-go").on("click", function () {
     if (!$("form").iboValid()) return;		//在提交表单之前进行验证
 });
 ```
-
-## Tips
-
-该插件主要是修改了jquery.validate中的showErrors方法，显示错误信息用tooltip的方式。
-
-另外这里并没有使用Bootstrap的原有样式文件，100多K对于手机端的使用是不是太耗流量了。
-
-所以只是将其用到的部分截取出来而已。
