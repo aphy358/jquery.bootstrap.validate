@@ -50,6 +50,7 @@
             InitValidator();            //初始化验证
         });
 
+
         //初始化验证
         function InitValidator() {
             $("form").validate({
@@ -64,6 +65,7 @@
             });
         };
 
+		
         $(".query-go").on("click", function () {
             if (!$("form").iboValid()) return;
         });
