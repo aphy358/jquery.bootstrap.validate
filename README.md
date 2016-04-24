@@ -13,7 +13,6 @@
 UI只是粗略设计，敬请见谅！
 
 ![View](https://github.com/aphy358/jquery.bootstrap.validate/blob/master/screenshot2.jpg)
-![View](https://github.com/aphy358/jquery.bootstrap.validate/blob/master/screenshot1.jpg)
 
 ## Dependencies
 
