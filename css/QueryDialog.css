@@ -1,119 +1,106 @@
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.428571429;
-	color: #333333;
-	background-color: #ffffff;
-	margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0;
 }
 
 #QueryDialog {
-	position: absolute;
-	top: 10%;
-	width: 98%;
-	left: 1%;
-	z-index: 2001;
+    position: absolute;
+    top: 10%;
+    width: 98%;
+    left: 1%;
+    z-index: 2001;
 }
 
 .qdialog-mask {
-	position: absolute;
-	top: 0%;
-	width: 100%;
-	height: 100%;
-	background-color: #808080;
-	opacity: 0.7;
-	z-index: 2000;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #808080;
+    opacity: 0.7;
+    z-index: 2000;
 }
 
 #QueryDialog ul {
-	padding-left: 0;
-	margin-top: 0;
+    padding-left: 0;
+    margin-top: 0;
 }
 
-input,
-button,
-select,
-textarea {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
-
-/*ÿһ����������ʽ*/
-
+/*每一个条件项样式*/
 .query-item {
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	margin-bottom: -1px;
-	background-color: #ffffff;
-	border-left: 1px solid #808080;
-	border-right: 1px solid #808080;
-	border-top: 1px dotted #808080;
-	height: 24px;
-	line-height: 24px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-top: 1px dotted #808080;
+    height: 24px;
+    line-height: 24px;
 }
 
-.query-item:first-child {
-	border-top: 1px solid #808080;
-	border-radius: 5px 5px 0 0;
-}
+    .query-item:first-child {
+        border-top: 1px solid #808080;
+        border-radius: 5px 5px 0 0;
+    }
 
-.query-item:last-child {
-	border-bottom: 1px solid #808080;
-	border-radius: 0 0 5px 5px;
-}
+    .query-item:last-child {
+        border-bottom: 1px solid #808080;
+        border-radius: 0 0 5px 5px;
+    }
 
-
-/*ÿһ��������������ʽ����������ȣ�*/
-
+/*每一个条件项描述样式（姓名、年龄等）*/
 .query-field-rmk {
-	float: left;
-	width: 60px;
-	font-weight: bold;
-	text-align: right;
-	margin-right: 10px;
+    float: left;
+    width: 60px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
 }
 
-
-/*�������������ڡ�С�ڡ���ȣ�*/
-
+/*条件描述（大于、小于、包含等）*/
 .condition-rmk {
-	float: left;
-	margin-right: 2px;
+    float: left;
+    margin-right: 2px;
 }
 
-
-/*����ֵ�����*/
-
+/*条件值输入框*/
 .condition-input {
-	float: left;
-	margin-right: 10px;
+    float: left;
+    margin-right: 10px;
 }
 
-
-/*����ֵ�����*/
-
-.condition-input:not([type='radio']) {
-	height: 18px;
-	line-height: 16px;
-	width: 25%;
-}
+    /*条件值输入框*/
+    .condition-input:not([type='radio']) {
+        height: 18px;
+        line-height: 16px;
+        width: 25%;
+    }
 
 .query-footer-item {
-	width: 49.8%;
-	height: 100%;
-	float: left;
-	text-align: center;
-	cursor: pointer;
+    width: 49.8%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
 }
 
 .query-cancel {
-	color: #e25050;
-	border-right: 1px solid #808080;
+    color: #e25050;
+    border-right: 1px solid #808080;
 }
 
 .query-go {
-	color: #1eba20;
+    color: #1eba20;
 }
