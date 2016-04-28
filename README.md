@@ -12,7 +12,7 @@
 该插件将jquery.validate在验证中显示错误信息部分用Bootstrap里的tooltip功能代替，使验证界面更美观。
 UI只是粗略设计，敬请见谅！
 
-![View](https://github.com/aphy358/jquery.bootstrap.validate/blob/master/screenshot2.jpg)
+![View](https://github.com/aphy358/jquery.bootstrap.validate/blob/master/img/screenshot2.jpg)
 
 ## Dependencies
 
